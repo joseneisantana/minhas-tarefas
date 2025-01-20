@@ -3,21 +3,21 @@ import { Container } from './styles'
 
 const tarefas = [
   {
-    titulo: 'estuda typeScript',
+    titulo: 'Estuda TypeScript',
     descricao: ' ver a aula 3 da Ebac',
-    propriedade: 'importante',
-    status: 'pendente'
+    prioridade: 'importante',
+    status: 'concluida'
   },
   {
     titulo: 'Pagar conta de internet',
     descricao: 'Baixar fatura Gmail',
-    propriedade: 'Urgente',
+    prioridade: 'urgente',
     status: 'concluida'
   },
   {
     titulo: 'Ir para academia',
     descricao: 'Fazer treino b ',
-    propriedade: 'importante',
+    prioridade: 'importante',
     status: 'pendente'
   }
 ]
@@ -32,7 +32,7 @@ const ListaDeTarefas = () => (
             descricao={t.descricao}
             titulo={t.titulo}
             status={t.status}
-            prioridade={t.propriedade}
+            prioridade={t.prioridade}
           />
         </li>
       ))}
