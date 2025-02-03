@@ -5,7 +5,7 @@ const Cadastro = () => (
   <>
     {/*Barra lateral*/}
 
-    <BarraLateral />
+    <BarraLateral mostrarFiltros={false} />
     <Formulario />
   </>
 )
