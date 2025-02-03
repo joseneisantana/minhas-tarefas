@@ -70,9 +70,7 @@ export const Botao = styled.button`
   border-radius: 8px;
   margin-right: 8px;
 `
-export const BotaoSalvar = styled(Botao)`
-  background-color: ${variaveis.verde};
-`
+
 export const BotaoCancelaRemover = styled(Botao)`
   background-color: ${variaveis.vermelho};
 `

@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import Tarefa from '../../models/Tarefa'
 import * as enums from '../../Utils/enums/Tarefa'
+import Cadastro from '../../pages/Home/Cadastro'
 
 type TarefasSatate = {
   itens: Tarefa[]
@@ -47,6 +48,18 @@ const tarefasSlice = createSlice({
       )
       if (indexDaTarefa >= 0) {
         state.itens[indexDaTarefa] = action.payload
+      }
+    },
+    Cadastrar: (state, action: PayloadAction<Tarefa>) => {
+      const tarefaJaExiste = state.itens.find(
+        (tarefa) =>
+          tarefa.titulo.toLowerCase() ===
+          action.payload.titulo.toLocaleLowerCase()
+      )
+      if (tarefaJaExiste) {
+        alert('Já existe uma tarefa com esse nome')
+      } else {
+        state.itens.push(action.payload)
       }
     }
   }
