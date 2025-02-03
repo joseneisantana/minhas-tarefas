@@ -65,6 +65,6 @@ const tarefasSlice = createSlice({
   }
 })
 
-export const { remover, editar } = tarefasSlice.actions
+export const { remover, editar, Cadastrar } = tarefasSlice.actions
 
 export default tarefasSlice.reducer
